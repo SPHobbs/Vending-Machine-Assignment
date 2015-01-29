@@ -1,58 +1,60 @@
 
-
 package vending.machine;
 import java.util.*;
 import java.text.DecimalFormat;
 
 public class VendingMachine {
 
-    public static DecimalFormat money = new DecimalFormat("0.00");
+    public static DecimalFormat money = new DecimalFormat("0");
     public static void main(String[] args) {
         // TODO code application logic here
-        double price;
-        System.out.println("Vending Machine");
-        System.out.println("1.Candy Bar --- $1.00");
-        System.out.println("2.Chips ------- $1.50");
-        System.out.println("3.Cookies ----- $2.00");
-        System.out.println("4.Soda -------- $2.50");
-        System.out.println("5.Water ------- $3.00");
-        System.out.println("Choose an item or hit 0 to exit");
-        
-        Scanner input = new Scanner(System.in);
-        int i = input.nextInt();
-        
-        if(i==0)
+        while(true)
         {
-            System.exit(0);
-        }
-        else if(i==1)
-        {
-            System.out.println("Candy");
-            candy();
-        }
-        else if(i==2)
-        {
-            System.out.println("Chips");
-            chips();
-        }
-        else if(i==3)
-        {
-            System.out.println("Cookies");
-            cookies();
-        }
-        else if(i==4)
-        {
-            System.out.println("Soda");
-            soda();
-        }
-        else if(i==5)
-        {
-            System.out.println("Water");
-            water();
-        }
-        else
-        {
-            System.out.println("That is not a valid selection. Please try again.");
+            double price;
+            System.out.println("\n" + "Vending Machine");
+            System.out.println("1.Candy Bar --- $1.00");
+            System.out.println("2.Chips ------- $1.50");
+            System.out.println("3.Cookies ----- $2.00");
+            System.out.println("4.Soda -------- $2.50");
+            System.out.println("5.Water ------- $3.00");
+            System.out.println("Choose an item or hit 0 to exit");
+
+            Scanner input = new Scanner(System.in);
+            int i = input.nextInt();
+
+            if(i==0)
+            {
+                System.exit(0);
+            }
+            else if(i==1)
+            {
+                System.out.println("1.Candy Bar --- $1.00");
+                candy();
+            }
+            else if(i==2)
+            {
+                System.out.println("2.Chips ------- $1.50");
+                chips();
+            }
+            else if(i==3)
+            {
+                System.out.println("3.Cookies ----- $2.00");
+                cookies();
+            }
+            else if(i==4)
+            {
+                System.out.println("4.Soda -------- $2.50");
+                soda();
+            }
+            else if(i==5)
+            {
+                System.out.println("5.Water ------- $3.00");
+                water();
+            }
+            else
+            {
+                System.out.println("That is not a valid selection. Please try again.");
+            }
         }
         
     }
